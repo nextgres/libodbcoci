@@ -1,0 +1,29 @@
+Source: libodbcoci
+Priority: extra
+Maintainer: Jonah H. Harris <jonah.harris@gmail.com>
+Build-Depends: debhelper (>= 9), dh-autoreconf, pkg-config
+Standards-Version: 3.9.5
+Section: libs
+Homepage: https://github.com/libyal/libodbcoci
+
+Package: libodbcoci
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: libodbcoci-dbg
+Description: Library to provide generic file data functions
+ libodbcoci is a library to provide generic file data functions.
+
+Package: libodbcoci-dbg
+Architecture: any
+Section: debug
+Depends: libodbcoci (= ${binary:Version}), ${misc:Depends}
+Description: Debugging symbols for libodbcoci
+ Debugging symbols for libodbcoci.
+
+Package: libodbcoci-dev
+Section: libdevel
+Architecture: any
+Depends: libodbcoci (= ${binary:Version}), ${misc:Depends}
+Description: Header files and libraries for developing applications for libodbcoci
+ Header files and libraries for developing applications for libodbcoci.
+
